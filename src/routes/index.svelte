@@ -1,23 +1,30 @@
 <script>
 	import Page from "$components/Page.svelte";
-	import Subtitle from "$components/Subtitle.svelte";
-	import RecipeCard from '$components/RecipeCard.svelte';
+	import FeaturedRecipes from '$components/FeaturedRecipes.svelte';
+
+	const recipes = [
+		{
+			title: 'Chunky Lentil Soup',
+			description: 'A hearty lentil soup packed with veggies',
+		},
+		{
+			title: 'Turkey Sandwich',
+			description: 'Reliable classic that you can eat every day'
+		},
+		{
+			title: 'Yogurt Bowl',
+			description: 'No cooking involved! Just some yogurt and fruit'
+		},
+		{
+			title: 'Bowl of Cereal',
+			description: 'Only two ingredients, ready made'
+		}
+	]
 </script>
 
-<style>
-	.sidescroll-container {
-		width: 100%;
-		display: flex;
-		overflow-x: scroll;
-	}
-</style>
-
 <Page title="Recipes">
-	<Subtitle>Lunch Recipes</Subtitle>
-	<div class="sidescroll-container">
-		<RecipeCard title="Lentil Soup" description="A very yummy soup"/>
-		<RecipeCard title="Turkey Sandwich" description="A sandwich you can eat every day" />
-		<RecipeCard title="Lentil Soup" description="A very yummy soup"/>
-		<RecipeCard title="Turkey Sandwich" description="A sandwich you can eat every day" />
-	</div>
+	<FeaturedRecipes heading="Lunch" recipes={recipes} />
+	<FeaturedRecipes heading="Iranian Food" recipes={recipes} />
+	<FeaturedRecipes heading="Dinner" recipes={recipes} />
+	<FeaturedRecipes heading="Tex-Mex" recipes={recipes} />
 </Page>
