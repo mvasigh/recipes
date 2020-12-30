@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --color-background-light: #eee;
+    --color-background-dark: #212121;
+    --color-text-light: #212121;
+    --color-text-dark: #eee;
+    --spacing-unit: 6px;
+    --font-family-heading: "Playfair Display", serif;
+    --font-family-body: "Open Sans", sans-serif;
+}
+
+body[data-theme="light"] {
+    --color-background: var(--color-background-light);
+    --color-text: var(--color-text-light);
+}
+
+body[data-theme="dark"] {
+    --color-background: var(--color-background-dark);
+    --color-text: var(--color-text-dark);
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-family-body);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-family-heading);
+}
