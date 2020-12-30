@@ -1,46 +1,23 @@
 <script>
+	import Page from "$components/Page.svelte";
+	import Subtitle from "$components/Subtitle.svelte";
+	import RecipeCard from '$components/RecipeCard.svelte';
 </script>
 
-<main>
-	<h1>Hello Twitch!</h1>
-
-	<p>Visit the <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte apps.</p>
-</main>
-
 <style>
-	:root {
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	}
-
-	main {
-		text-align: center;
-		padding: 1em;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4rem;
-		font-weight: 100;
-		line-height: 1.1;
-		margin: 4rem auto;
-		max-width: 14rem;
-	}
-
-	p {
-		max-width: 14rem;
-		margin: 2rem auto;
-		line-height: 1.35;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			max-width: none;
-		}
-
-		p {
-			max-width: none;
-		}
+	.sidescroll-container {
+		width: 100%;
+		display: flex;
+		overflow-x: scroll;
 	}
 </style>
+
+<Page title="Recipes">
+	<Subtitle>Lunch Recipes</Subtitle>
+	<div class="sidescroll-container">
+		<RecipeCard title="Lentil Soup" description="A very yummy soup"/>
+		<RecipeCard title="Turkey Sandwich" description="A sandwich you can eat every day" />
+		<RecipeCard title="Lentil Soup" description="A very yummy soup"/>
+		<RecipeCard title="Turkey Sandwich" description="A sandwich you can eat every day" />
+	</div>
+</Page>
