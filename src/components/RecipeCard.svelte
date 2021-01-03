@@ -5,14 +5,17 @@
 </script>
 
 <style>
+    :root {
+        --card-width: 400px;
+    }
+
     .card {
-        min-width: 300px;
-        width: 300px;
+        max-width: var(--card-width);
     }
 
     figure {
         height: 200px;
-        width: 300px;
+        max-width: var(--card-width);
         overflow: hidden;
         margin-bottom: calc(var(--spacing-unit));
     }

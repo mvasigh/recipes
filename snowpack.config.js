@@ -5,6 +5,7 @@ module.exports = {
 		'src/components': '/_components'
 	},
 	alias: {
-		$components: './src/components'
+		$components: './src/components',
+		$util: './src/util'
 	}
 };
