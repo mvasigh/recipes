@@ -1,30 +1,44 @@
-<script>
-	import Page from "$components/Page.svelte";
-	import FeaturedRecipes from '$components/FeaturedRecipes.svelte';
+<script context="module">
+	export async function load({ fetch }) {
+		const recipes = await fetch("recipes.json").then((res) => res.json());
+		const categories = recipes.reduce((acc, recipe) => {
+			if (!recipe.categories) {
+				return acc;
+			}
 
-	const recipes = [
-		{
-			title: 'Chunky Lentil Soup',
-			description: 'A hearty lentil soup packed with veggies',
-		},
-		{
-			title: 'Turkey Sandwich',
-			description: 'Reliable classic that you can eat every day'
-		},
-		{
-			title: 'Yogurt Bowl',
-			description: 'No cooking involved! Just some yogurt and fruit'
-		},
-		{
-			title: 'Bowl of Cereal',
-			description: 'Only two ingredients, ready made'
-		}
-	]
+			for (let category of recipe.categories) {
+				if (!acc[category]) {
+					acc[category] = [];
+				}
+				acc[category].push(recipe);
+			}
+
+			return acc;
+		}, {});
+
+		return {
+			props: {
+				recipes: {
+					all: recipes,
+					byCategory: categories,
+				},
+			},
+		};
+	}
+</script>
+
+<script>
+	import { headerCase } from "change-case";
+	import Page from "$components/Page.svelte";
+	import FeaturedRecipes from "$components/FeaturedRecipes.svelte";
+
+	export let recipes;
 </script>
 
 <Page title="Recipes">
-	<FeaturedRecipes heading="Lunch" recipes={recipes} />
-	<FeaturedRecipes heading="Iranian Food" recipes={recipes} />
-	<FeaturedRecipes heading="Dinner" recipes={recipes} />
-	<FeaturedRecipes heading="Tex-Mex" recipes={recipes} />
+	{#each Object.keys(recipes.byCategory) as category}
+		<FeaturedRecipes
+			heading={headerCase(category)}
+			recipes={recipes.byCategory[category]} />
+	{/each}
 </Page>
