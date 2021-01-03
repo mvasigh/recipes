@@ -1,0 +1,106 @@
+{
+  "title": "Chunky Lentil and Vegetable Soup",
+  "description": "A quick, hearty and flavorful lentil soup (with optional sausage) that can serve as a comforting winter meal",
+  "prepTime": 10,
+  "cookTime": 35,
+  "servings": 8,
+  "ingredients": [
+    {
+      "name": "olive oil",
+      "amount": 2,
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic",
+      "amount": 2
+    },
+    {
+      "name": "onion",
+      "amount": 1
+    },
+    {
+      "name": "carrot",
+      "amount": 4
+    },
+    {
+      "name": "celery",
+      "amount": 3
+    },
+    {
+      "name": "black bean",
+      "amount": 15,
+      "unit": "oz"
+    },
+    {
+      "name": "lentil",
+      "amount": 1,
+      "unit": "cup"
+    },
+    {
+      "name": "cumin",
+      "amount": 1,
+      "unit": "tsp"
+    },
+    {
+      "name": "oregano",
+      "amount": 1,
+      "unit": "tsp"
+    },
+    {
+      "name": "smoked paprika",
+      "amount": 0.5,
+      "unit": "tsp"
+    },
+    {
+      "name": "cayenne pepper",
+      "amount": 0.25,
+      "unit": "tsp",
+      "optional": true
+    },
+    {
+      "name": "salt",
+      "amount": 0.5,
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "flexible": true
+    },
+    {
+      "name": "diced tomato",
+      "amount": 15,
+      "unit": "oz"
+    },
+    {
+      "name": "vegetable broth",
+      "amount": 4,
+      "unit": "cup"
+    },
+    {
+      "name": "jalapeño beef sausage",
+      "amount": 2,
+      "optional": true
+    }
+  ],
+  "directions": [
+    {
+      "text": "Mince the garlic and dice the onion. Cook both in a large pot with olive oil over medium heat until tender.",
+      "time": 5
+    },
+    {
+      "text": "Slice the celery and peel and slice the carrots. Add the celery and carrots to the pot and continue to saute.",
+      "time": 5
+    },
+    {
+      "text": "Drain the can of black beans and add it to the pot along with the dry lentils, cumin, oregano, smoked paprika, cayenne pepper, and some freshly cracked black pepper (10-15 cranks), and continue to saute.",
+      "time": 5
+    },
+    {
+      "text": "Add the diced tomatoes (with juices) and vegetable broth, and stir to combine."
+    },
+    {
+      "text": "Increase heat to high and allow pot to come to a boil, then turn heat down to low, place lid on top and let simmer until lentils are tender. Taste soup and add salt as needed.",
+      "time": 30
+    }
+  ]
+}
