@@ -1,5 +1,6 @@
 import chunkyLentilSoup from "./_chunky-lentil-soup.json";
 
-export default {
-  "chunky-lentil-vegetable-soup": chunkyLentilSoup,
-};
+export default [chunkyLentilSoup].reduce((acc, curr) => {
+  acc[curr.id] = curr;
+  return acc;
+}, {});

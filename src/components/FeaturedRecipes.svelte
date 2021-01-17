@@ -24,6 +24,7 @@
     {#each recipes as recipe}
         <RecipeCard
             title={recipe.title}
+            href="/recipes/{recipe.id}"
             description={recipe.description}
             image={recipe.image} />
     {/each}
