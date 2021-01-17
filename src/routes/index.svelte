@@ -1,7 +1,7 @@
 <script context="module">
 	export async function load({ fetch }) {
-		const recipes = await fetch("recipes.json").then((res) => res.json());
-		const categories = recipes.reduce((acc, recipe) => {
+		const recipes = await fetch("/data.json").then((res) => res.json());
+		const categories = Object.values(recipes).reduce((acc, recipe) => {
 			if (!recipe.categories) {
 				return acc;
 			}

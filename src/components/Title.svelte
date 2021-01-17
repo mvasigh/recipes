@@ -5,7 +5,8 @@
 <style>
     h1 {
         font-weight: 700;
-        font-size: 3.2rem;
+        font-size: 2.8rem;
+        line-height: 1;
     }
 
     .gutterBottom {

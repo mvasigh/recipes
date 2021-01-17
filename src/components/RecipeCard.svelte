@@ -2,6 +2,7 @@
     export let title = '';
     export let description = '';
     export let image = '';
+    export let href = '';
 </script>
 
 <style>
@@ -39,10 +40,10 @@
     }
 </style>
 
-<div class="card">
+<a href={href} class="card">
     <figure>
-        <img src="/lentil_soup.jpg" alt={title} />
+        <img src={image} alt={title} />
     </figure>
     <p class="title">{title}</p>
     <p class="description">{description}</p>
-</div>
+</a>

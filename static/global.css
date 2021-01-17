@@ -7,6 +7,9 @@
 }
 
 :root {
+    --color-grey-light: rgb(202, 202, 202);
+    --color-grey-medium: rgb(128, 128, 128);
+    --color-grey-dark: rgb(75, 75, 75);
     --color-background-light: #eee;
     --color-background-dark: #212121;
     --color-text-light: #212121;
@@ -19,11 +22,14 @@
 body[data-theme="light"] {
     --color-background: var(--color-background-light);
     --color-text: var(--color-text-light);
+    --color-text-secondary: var(--color-grey-medium);
+    --color-pill: var(--color-grey-light);
 }
 
 body[data-theme="dark"] {
     --color-background: var(--color-background-dark);
     --color-text: var(--color-text-dark);
+    --color-pill: var(--color-grey-dark);
 }
 
 body {
@@ -34,4 +40,9 @@ body {
 
 h1, h2, h3 {
     font-family: var(--font-family-heading);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
 }
