@@ -1,5 +1,6 @@
 {
   "title": "Chunky Lentil and Vegetable Soup",
+  "image": "lentil_soup.jpg",
   "description": "A quick, hearty and flavorful lentil soup (with optional sausage) that can serve as a comforting winter meal",
   "categories": ["lunch", "dinner", "soup"],
   "prepTime": 10,
@@ -13,6 +14,7 @@
     },
     {
       "name": "garlic",
+      "unit": "cloves",
       "amount": 2
     },
     {
@@ -25,6 +27,7 @@
     },
     {
       "name": "celery",
+      "unit": "stalks",
       "amount": 3
     },
     {

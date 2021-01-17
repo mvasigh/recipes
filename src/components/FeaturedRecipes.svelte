@@ -22,6 +22,9 @@
 <Subtitle>{heading}</Subtitle>
 <div class="sidescrollContainer" class:gutterBottom>
     {#each recipes as recipe}
-        <RecipeCard title={recipe.title} description={recipe.description} />
+        <RecipeCard
+            title={recipe.title}
+            description={recipe.description}
+            image={recipe.image} />
     {/each}
 </div>

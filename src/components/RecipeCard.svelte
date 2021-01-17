@@ -41,7 +41,7 @@
 
 <div class="card">
     <figure>
-        <img src="/lentil_soup.jpg" alt={title} />
+        <img src={image} alt={title} />
     </figure>
     <p class="title">{title}</p>
     <p class="description">{description}</p>
