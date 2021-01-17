@@ -23,6 +23,7 @@
     import Page from "$components/Page.svelte";
     import PillGroup from "$components/PillGroup.svelte";
     import IngredientList from "$components/IngredientList.svelte";
+import DirectionsList from "../../components/DirectionsList.svelte";
 
     export let recipe;
 </script>
@@ -36,7 +37,7 @@
 
     .sectionTitle {
         font-size: 2rem;
-        margin-bottom: calc(var(--spacing-unit) * 4);
+        margin: calc(var(--spacing-unit) * 4) 0;
     }
 
     figure {
@@ -61,6 +62,10 @@
     <figure><img src={`/${recipe.image}`} alt="" /></figure>
 
     <!-- Ingredients -->
-    <h3 class="sectionTitle">Ingredients</h3>
+    <h3 class="sectionTitle" id="ingredients">Ingredients</h3>
     <IngredientList ingredients={recipe.ingredients} />
+    
+    <!-- Directions -->
+    <h3 class="sectionTitle" id="directions">Directions</h3>
+    <DirectionsList directions={recipe.directions} />
 </Page>
